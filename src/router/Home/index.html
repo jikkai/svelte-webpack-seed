@@ -1,0 +1,29 @@
+<main>
+  <h1>Hello {{name}}!</h1>
+  <input type="text" bind:value="name" />
+  <Button type="primary" on:click="openMessage()">打开 Message</Button>
+</main>
+
+<script>
+  import { Button, Message } from 'svelte-flat'
+  import './style.css'
+
+  export default {
+    data () {
+      return {
+        name: 'Svelte'
+      }
+    },
+    methods: {
+      openMessage () {
+        Message({
+          content: 'Hello ' + this.get('name')
+        })
+      }
+    },
+    components: {
+      Button,
+      Message
+    }
+  }
+</script>

@@ -1,0 +1,12 @@
+<script>
+  import SvelteRouter from 'svelte-router'
+  import routes from './router/routes'
+
+  const router = SvelteRouter.createRouter(routes)
+
+  export default {
+    oncreate () {
+      router.create('#app')
+    }
+  }
+</script>

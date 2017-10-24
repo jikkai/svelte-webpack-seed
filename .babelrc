@@ -1,0 +1,9 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["Chrome >= 33", "safari >= 7"]
+      }
+    }]
+  ]
+}
